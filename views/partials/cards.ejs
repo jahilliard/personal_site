@@ -1,0 +1,66 @@
+    <ul id="filters" class="clearfix">
+      <li><span class="filter active" data-filter=".work_exp, .ventures, .projects">All</span></li>
+      <li><span class="filter" data-filter=".work_exp">Work Expirence</span></li>
+      <li><span class="filter" data-filter=".ventures">Ventures</span></li>
+      <li><span class="filter" data-filter=".projects">Projects</span></li>
+    </ul>
+
+    <div id="portfoliolist">
+
+      <% for (var key in projects) { %>
+        <% if (projects.hasOwnProperty(key)) { %>
+            <% if (projects[key]['category'] == "Work Expirence") { %>
+              <div class="portfolio work_exp" data-cat="work_exp">
+            <% } else { %>
+              <div class="portfolio <%= projects[key]['category'].toLowerCase(); %>" data-cat="<%= projects[key]['category'].toLowerCase(); %>">
+            <% } %>
+                <div class="portfolio-wrapper" id="<%= key %>">       
+                  <img src="<%= projects[key]['image'] %>" alt="" />
+                  <div class="label">
+                    <div class="label-text">
+                      <a class="text-title"><%= projects[key]['title'] %></a>
+                      <span class="text-category"><%= projects[key]['category'] %></span>
+                    </div>
+                    <div class="label-bg"></div>
+                  </div>
+                </div>
+              </div>  
+        <% } %>
+      <% } %>               
+      
+    </div>
+    
+  </div><!-- container -->
+
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script src="js/content_card_load.js"></script>
+<script type="text/javascript">
+
+  $(function () {
+    
+    var filterList = {
+    
+      init: function () {
+      
+        // MixItUp plugin
+        // http://mixitup.io
+        $('#portfoliolist').mixItUp({
+          selectors: {
+            target: '.portfolio',
+            filter: '.filter' 
+          },
+          load: {
+            filter: '.work_exp, .ventures, .projects'  
+          }     
+        });               
+      
+      }
+
+    };
+    
+    // Run the show!
+    filterList.init();
+    
+    
+  }); 
+  </script>

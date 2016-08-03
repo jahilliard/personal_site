@@ -1,0 +1,38 @@
+<div class="container row back">
+	<div id="back_button">
+		<div class="x spin large"><b></b><b></b><b></b><b></b></div>
+	</div>
+	<h1 class="text-center"><%= title %></h1>
+</div>
+<div class="row project">
+	<img class="col-md-4" id="single_thumbnail" src='<%= image %>'/>
+	<div class="col-md-8">
+		<p> <%= description %> </p>
+		<h3> Project Links </h3>
+		<ul>
+    		<% for(var i=0; i<links.length; i++) { %>
+        		<li>
+            		<a href='<%= links[i] %>'>
+                		<%= links[i] %>
+	            	</a>
+    	    	</li>
+		   	<% } %>
+		</ul>
+</div>
+
+<script type="text/javascript">
+	
+$("#back_button").click(function(){
+
+    var request = $.ajax({
+      url: "/getCardContent",
+      method: "GET",
+      dataType: "html"
+    });
+
+    request.done(function( html ) {
+      $("#content").html( html );
+    });
+
+});
+</script>

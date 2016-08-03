@@ -1,0 +1,16 @@
+{
+  "name": "new_resume_site",
+  "version": "1.0.0",
+  "description": "This is my resume site.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Hilliard",
+  "license": "ISC",
+  "dependencies": {
+   	"morgan" : "*",
+   	"express" : "*",
+   	"ejs" : "*"
+  }
+}
