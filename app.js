@@ -13,7 +13,7 @@ var projects = {
 		"category" : "Projects",
 		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ipsum quam, elementum sit amet leo sed, interdum pharetra nulla. Fusce in mi porta, efficitur metus et, vehicula metus. Suspendisse vel scelerisque dui. Phasellus sodales odio at elit ornare auctor. Suspendisse ullamcorper felis diam, quis auctor enim finibus eu. Vivamus at dolor vitae eros sagittis mattis non non enim. Mauris urna sem, vestibulum id dui tempor, bibendum dignissim lacus. Duis molestie odio imperdiet tincidunt molestie. Phasellus semper eleifend fermentum. Nulla facilisi.",
 		"links" : ["https://github.com/jahilliard/okCupidShinyApp"],
-		"image" : "img/tiles/bar_tile.png"
+		"image" : "img/tiles/Bar_tile.png"
 	},
 	"bubble" :{
 		"title" : "Bubble Chart",
@@ -27,7 +27,7 @@ var projects = {
 		"category" : "Work Expirence",
 		"description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ipsum quam, elementum sit amet leo sed, interdum pharetra nulla. Fusce in mi porta, efficitur metus et, vehicula metus. Suspendisse vel scelerisque dui. Phasellus sodales odio at elit ornare auctor. Suspendisse ullamcorper felis diam, quis auctor enim finibus eu. Vivamus at dolor vitae eros sagittis mattis non non enim. Mauris urna sem, vestibulum id dui tempor, bibendum dignissim lacus. Duis molestie odio imperdiet tincidunt molestie. Phasellus semper eleifend fermentum. Nulla facilisi.",
 		"links" : ["http://www.cmu.edu/information-systems/"],
-		"image" : "img/tiles/cmu_tile.png"
+		"image" : "img/tiles/CMU_tile.png"
 	},
 	"ecovolt" :{
 		"title" : "Ecovolt Financial - Financial Analyst",
