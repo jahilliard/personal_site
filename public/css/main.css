@@ -7,6 +7,10 @@
     opacity:0.95;
 }
 
+.spacer{
+  margin-right: 10px;
+}
+
 .words{
 	border-radius: 100px;
 	background-color: rgba(0,0,0,.06);

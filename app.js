@@ -113,5 +113,5 @@ app.get('/getCardContent', function(req, res){
   res.render('partials/cards', {'projects' : projects});
 });
 
-app.listen(8000);
-console.log('App running on port 8000');
+app.listen(8000, "138.68.14.96");
+console.log('App running on port http://138.68.14.96:8000');

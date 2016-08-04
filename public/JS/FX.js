@@ -49,6 +49,9 @@
             }, options.delay || 10);
         },
         fadeOut: function(element, options) {
+            if (element.style == null) {
+                return;
+            }
             var to = 1;
             this.animate({
                 duration: options.duration,
@@ -58,11 +61,14 @@
                 },
                 complete: options.complete,
                 step: function(delta) {
-                    element.style.opacity = to - delta;
+                    element.style.opacity = to - delta;                        
                 }
             });
         },
         fadeIn: function(element, options) {
+            if (element.style == null) {
+                return;
+            }
             var to = 0;
             this.animate({
                 duration: options.duration,

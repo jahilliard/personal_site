@@ -195,7 +195,6 @@ function makeNewTable(width, adjust_number){
         offset = 8.5;
     }
     $('#tab').remove()
-    console.log(height);
     makeTable(width, height, offset, adjust_number);
     return width;
 }
