@@ -10,9 +10,9 @@
       <% for (var key in projects) { %>
         <% if (projects.hasOwnProperty(key)) { %>
             <% if (projects[key]['category'] == "Work Expirence") { %>
-              <div class="portfolio work_exp" data-cat="work_exp">
+              <div class="portfolio col-xs-4 work_exp" data-cat="work_exp">
             <% } else { %>
-              <div class="portfolio <%= projects[key]['category'].toLowerCase(); %>" data-cat="<%= projects[key]['category'].toLowerCase(); %>">
+              <div class="portfolio col-xs-4 <%= projects[key]['category'].toLowerCase(); %>" data-cat="<%= projects[key]['category'].toLowerCase(); %>">
             <% } %>
                 <div class="portfolio-wrapper" id="<%= key %>">       
                   <img src="<%= projects[key]['image'] %>" alt="" />

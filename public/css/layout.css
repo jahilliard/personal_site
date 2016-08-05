@@ -82,9 +82,9 @@ body {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
-	width:31%;
-	height: auto;
-	margin:1%;
+	/*width:31%;
+	height: auto;*/
+	margin-bottom:15px;
 	display:none;
 	float:left;
 	overflow:hidden;
@@ -93,7 +93,7 @@ body {
 	.portfolio-wrapper {
 		overflow:hidden;
 		position: relative !important;
-		background: #666;
+		background: #fff;
 		cursor:pointer;
 	}
 

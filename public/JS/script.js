@@ -25,95 +25,12 @@ function makeTable(width, height, offset, adjust_number){
     $('.jumbotron').append(table);
     $('.front').css('z-index', "5");
 
-    startColorAnimation( adjust_number, num_horizontal_square );
+    startColorAnimation( adjust_number, num_horizontal_square, 10 );
 
     return;
 }
 
-// function startEmojiArmy(square_size, horizontal_squares, verticle_rows = 10){
-//     var verticle_spot = Math.round(Math.random()*verticle_rows)
-//     var horizontal_spot = Math.round(Math.random()*horizontal_squares)
-
-//     var emoji = $('<div></div>').addClass('em em-blush').css("z-index", 2)
-//                     .css("position", "absolute").css('opacity', 50)
-//                     .css('top', verticle_spot*square_size - 14)
-//                     .css('left', horizontal_spot*square_size - 9);
-//     $('.jumbotron').append(emoji);
-//     startEmojiAnimation(emoji[0], 
-//     {
-//         "verticle_spot" : verticle_spot,
-//         "horizontal_spot" : horizontal_spot
-//     },{
-//         "horizontal_squares" : horizontal_squares, 
-//         "verticle_squares" : verticle_rows,
-//         "square_size" : square_size
-//     });
-// }
-
-// function startEmojiAnimation(emoji_name, current_position, bounds_information){
-//     var direction = Math.floor(Math.random()*4);
-//     var new_position = confirmDirection(direction, current_position, bounds_information)
-//     FX.emojiRun(emoji_name, {
-//         duration: 500,
-//         new_position: new_position,
-//         complete: function() {
-//             console.log("Done");
-//         }
-//     });
-// }
-
-// function confirmDirection(direction, current_position, bounds_information){
-//     if (direction == 0){
-//         if (current_position.verticle_spot == 0) {
-//             current_position.verticle_spot += 1;
-//             return [bounds_information.square_size*current_position.verticle_spot, 'top'];
-//         }
-//         current_position.verticle_spot -= 1;
-//         return [bounds_information.square_size*current_position.verticle_spot, 'top'];
-//     } else if (direction == 1){
-//         if (current_position.horizontal_spot == bounds_information.horizontal_squares) {
-//             current_position.horizontal_spot -= 1;
-//             return [bounds_information.square_size*current_position.horizontal_spot, 'left'];
-//         }
-//         current_position.horizontal_spot += 1
-//         return [bounds_information.square_size*current_position.horizontal_spot, 'left'];
-//     } else if (direction == 2){
-//         if (current_position.verticle_spot == bounds_information.verticle_squares) {
-//             current_position.verticle_spot -= 1;
-//             return [bounds_information.square_size*current_position.verticle_spot, 'top']
-//         }
-//         current_position.verticle_spot += 1;
-//         return [bounds_information.square_size*current_position.verticle_spot, 'top']
-//     } else {
-//         if (current_position.horizontal_spot == 0) {
-//             current_position.horizontal_spot += 1;
-//             return [bounds_information.square_size*current_position.horizontal_spot, 'left'];
-//         }
-//         current_position.horizontal_spot -= 1;
-//         return [bounds_information.square_size*current_position.horizontal_spot, 'left'];
-//     }
-
-// }
-
-// var time = 0;
-// var timeout = 700*20;
-
-// function startColorAnimation( horizontal_cols, verticle_rows = 10 ){
-//     if (time == timeout) {
-//         return;
-//     } else {
-//         console.log("HIT");
-//         time += 700;
-//         singleSquareAnimate(pickNewSquare(horizontal_cols, verticle_rows)
-//                                         , horizontal_cols, verticle_rows);   
-//         window.setTimeout(startColorAnimation(horizontal_cols, verticle_rows), 1000);
-//     }
-//     return;
-
-// }
-
-
-function startColorAnimation( adjust_number, horizontal_cols, verticle_rows = 10 ){
+function startColorAnimation( adjust_number, horizontal_cols, verticle_rows ){
     for (var i = 35; i >= 0; i--) {
         singleSquareAnimate(pickNewSquare(horizontal_cols, verticle_rows)
                                         , horizontal_cols, verticle_rows
@@ -201,7 +118,87 @@ function makeNewTable(width, adjust_number){
 
 
 
+// function startEmojiArmy(square_size, horizontal_squares, verticle_rows = 10){
+//     var verticle_spot = Math.round(Math.random()*verticle_rows)
+//     var horizontal_spot = Math.round(Math.random()*horizontal_squares)
 
+//     var emoji = $('<div></div>').addClass('em em-blush').css("z-index", 2)
+//                     .css("position", "absolute").css('opacity', 50)
+//                     .css('top', verticle_spot*square_size - 14)
+//                     .css('left', horizontal_spot*square_size - 9);
+//     $('.jumbotron').append(emoji);
+//     startEmojiAnimation(emoji[0], 
+//     {
+//         "verticle_spot" : verticle_spot,
+//         "horizontal_spot" : horizontal_spot
+//     },{
+//         "horizontal_squares" : horizontal_squares, 
+//         "verticle_squares" : verticle_rows,
+//         "square_size" : square_size
+//     });
+// }
+
+// function startEmojiAnimation(emoji_name, current_position, bounds_information){
+//     var direction = Math.floor(Math.random()*4);
+//     var new_position = confirmDirection(direction, current_position, bounds_information)
+//     FX.emojiRun(emoji_name, {
+//         duration: 500,
+//         new_position: new_position,
+//         complete: function() {
+//             console.log("Done");
+//         }
+//     });
+// }
+
+// function confirmDirection(direction, current_position, bounds_information){
+//     if (direction == 0){
+//         if (current_position.verticle_spot == 0) {
+//             current_position.verticle_spot += 1;
+//             return [bounds_information.square_size*current_position.verticle_spot, 'top'];
+//         }
+//         current_position.verticle_spot -= 1;
+//         return [bounds_information.square_size*current_position.verticle_spot, 'top'];
+//     } else if (direction == 1){
+//         if (current_position.horizontal_spot == bounds_information.horizontal_squares) {
+//             current_position.horizontal_spot -= 1;
+//             return [bounds_information.square_size*current_position.horizontal_spot, 'left'];
+//         }
+//         current_position.horizontal_spot += 1
+//         return [bounds_information.square_size*current_position.horizontal_spot, 'left'];
+//     } else if (direction == 2){
+//         if (current_position.verticle_spot == bounds_information.verticle_squares) {
+//             current_position.verticle_spot -= 1;
+//             return [bounds_information.square_size*current_position.verticle_spot, 'top']
+//         }
+//         current_position.verticle_spot += 1;
+//         return [bounds_information.square_size*current_position.verticle_spot, 'top']
+//     } else {
+//         if (current_position.horizontal_spot == 0) {
+//             current_position.horizontal_spot += 1;
+//             return [bounds_information.square_size*current_position.horizontal_spot, 'left'];
+//         }
+//         current_position.horizontal_spot -= 1;
+//         return [bounds_information.square_size*current_position.horizontal_spot, 'left'];
+//     }
+
+// }
+
+// var time = 0;
+// var timeout = 700*20;
+
+// function startColorAnimation( horizontal_cols, verticle_rows = 10 ){
+//     if (time == timeout) {
+//         return;
+//     } else {
+//         console.log("HIT");
+//         time += 700;
+//         singleSquareAnimate(pickNewSquare(horizontal_cols, verticle_rows)
+//                                         , horizontal_cols, verticle_rows);   
+//         window.setTimeout(startColorAnimation(horizontal_cols, verticle_rows), 1000);
+//     }
+//     return;
+
+// }
 
 
 
